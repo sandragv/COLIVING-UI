@@ -1,0 +1,37 @@
+form.search {
+    margin: 4rem auto;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20%;
+}
+.city-filter, .entry-filter, .departure-filter, .price-week-filter, .price-month-filter, .profession-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0.7rem;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+}
+input.searchcity, input.searchentry, input.searchdeparture, input.searchprice, input.search-month-price, input.search-week-price, input.searchprofession {
+    padding: 0.4rem 1rem;
+    margin-bottom: 0rem;
+    flex: 1 1 auto;
+    border-radius: 0.3rem;
+    min-width: 0rem;
+}
+input.searchprofession {
+    flex: 0 1 auto;
+}
+label.city, label.entry, label.departure, label.price, label.month-price, label.profession {
+    padding-right: 1rem;
+    flex: 0 1 auto;
+}
+button.filter {
+    height: fit-content;
+    background-color: lavender;
+    margin-top: 0.75rem;
+}
+

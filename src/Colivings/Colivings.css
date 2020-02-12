@@ -1,0 +1,51 @@
+#banner-search {
+    background-image: url('../img/05ret.jpg');
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height:43.75rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.colivingssearch {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.colivingssearch h1{
+    width: 100%;
+    max-width: 100%;
+    color: #333;
+    text-align: center;
+    padding-top: 4rem;
+    margin-bottom: 0rem;
+}
+.colivings {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 3%;
+}
+.coliving-view {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    margin: 0 0.7rem;
+    padding-bottom: 4rem;
+}
+.colivings h2 a {
+    color: gray;
+    text-decoration: none;
+}
+.okbooked {
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+

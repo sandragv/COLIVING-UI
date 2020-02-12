@@ -1,0 +1,20 @@
+form#login {
+    display: block;
+    max-width: 35rem;
+    width: 35rem;
+    padding: 5rem;
+    background-color: aliceblue;
+    border-radius: 1.5rem;
+}
+form#login input {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.3rem;
+    color: #222222;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    min-width: 0rem;
+}

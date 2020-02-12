@@ -1,0 +1,77 @@
+.full-info {
+    display: flex;
+    flex-direction: column;
+}
+.coliving-info {
+    display: flex;
+    padding: 7rem 3rem 6rem 3rem;
+}
+.coliving-pic {
+    display: flex;
+    justify-content: flex-start;
+}
+.coliving-info-img {
+    flex: 0 1 auto;
+}
+.details {
+    padding: 1.8rem 0.93rem 0.93rem 3.12rem;
+    line-height: 1.8;
+}
+.apartments {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem 6rem 3rem;
+}
+.apartments h2 {
+    color: #444;
+    padding-left: 1.25rem;
+    padding-bottom: 1.87rem;
+    margin: 0;
+}
+.book-apartment {
+    display: flex;
+}
+h3.apartment-name {
+    color: #444;
+    padding-left: 0.62rem;
+}
+.apartment-view {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.7rem;
+    padding-bottom: 4rem;
+}
+form.booking-form {
+    margin: 0;
+    width: 25rem;
+    max-width: 25rem;
+    padding: 0.62rem 1rem 0.62rem 0.62rem;
+}
+form.booking-form input {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
+    color: #222222;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+}
+.options-booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+.options-booking label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1.25rem;    
+}
+button.make-reservation {
+    background-color: lavender;
+}
+button.save-apartment {
+    margin-left: 0;
+}
+

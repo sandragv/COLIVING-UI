@@ -1,0 +1,40 @@
+#contact-form {
+    display: block;
+    max-width: 35rem;
+    width: 35rem;
+    margin: 15rem auto;
+}
+#contact-form input {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.3rem;
+    color: #222222;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    min-width: 0rem;
+}
+#contact-form button {
+    width: fit-content;
+}
+
+@media only screen and (max-width: 950px){
+    #contact-form {
+        display: flex;
+        max-width: 90%;
+        width: 90%;
+        margin: 13rem auto;
+    }
+    #contact-form form {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        width: 90%;
+        margin: 0rem auto;
+    }
+    #contact-form button {
+        width: auto;
+    }
+}

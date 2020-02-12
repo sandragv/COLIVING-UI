@@ -1,0 +1,79 @@
+.private-hosts {
+    display: flex;
+    flex-wrap: wrap;
+}
+.private-hosts a {
+    text-decoration: none;
+    color: #111;
+}
+.private-hosts ul {
+    line-height: 1.8;
+}
+.host-edit-profile h2, #add-apartment h2 {
+    font-weight: 700;
+    color: #666;
+    font-size: 1.12rem;
+    padding: 0.62rem 0.62rem 0.62rem 3.5rem;
+}
+#add-apartment h2 {
+    padding: 0.62rem 0.62rem 0.62rem 0;
+}
+.add-space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.add-space label {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1.1rem;
+}
+button.save-apartment {
+    background-color: lavender;
+    margin-left: 6.25rem;
+}
+.host-profile ul {
+    list-style: none;
+    line-height: 2;
+}
+form.host-edit-profile, form#add-apartment {
+    margin: 0;
+    width: 28rem;
+    max-width: 28rem;
+    padding: 0.62rem 1rem 0.62rem 4rem;
+}
+form.host-edit-profile input, form#add-apartment input {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem 1rem;
+    margin-left: 0.62rem;
+    border-radius: 0.3rem;
+    color: #222222;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+}
+textarea.text-profile-item {
+    margin-top: 1.25rem;
+}
+.profile-elements.radios {
+    justify-content: space-evenly;
+}
+button.save-profile.host {
+    margin-left: 18.25rem;
+    margin-top: 1.25rem;
+}
+
+@media only screen and (max-width: 768px){
+    .host-edit-profile h2 {
+        padding: 0.62rem 0.62rem 0.62rem 0;
+    }
+    button.save-profile.host {
+        margin-left: 0;
+        margin-top: 1.25rem;
+    }
+    .profile-elements.radios {
+        justify-content: flex-start;
+    }
+}
+
+
