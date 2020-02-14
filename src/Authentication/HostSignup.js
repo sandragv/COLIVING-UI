@@ -87,9 +87,9 @@ const HostSignup = () => {
                          {errors.country && <p className="error">{errors.country}</p>}
                     </div>
                     <div>
-                        <input className={`${errors.photo && "inputError"}`} name="photo" value={values.photo}
+                        <input className={`${errors.poster && "inputError"}`} name="poster" value={values.poster}
                             onChange={handleChange} placeholder="url imagen" />
-                        {errors.photo && <p className="error">{errors.photo}</p>}
+                        {errors.poster && <p className="error">{errors.poster}</p>}
                     </div>
                     <label>
                         <p>Nº de apartamentos</p>
@@ -113,7 +113,7 @@ const HostSignup = () => {
                     </div>
                     <div id="services">
                         <p>Servicios incluidos</p>
-                        <select multiple={true} size="5" name="facilities" value={[facilities.toString()]} onChange={handleFacilities} >
+                        <select multiple={true} size="5" name="facilities" value={[facilities]} onChange={handleFacilities} >
                             <optgroup label="Instalaciones y servicios">
                                 <option value="wifi">Wifi</option>
                                 <option value="suplies">Suministros incluidos</option>

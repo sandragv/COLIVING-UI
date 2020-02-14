@@ -8,8 +8,8 @@ const HostEditProfile = () => {
     const editprofile = (user) => dispatch({ type: 'editprofile', user })
     const token = useSelector(s => s.user && s.user.token)
     const currentuser = useSelector(s => s.user)
-    const coliving = useSelector(s => s.coliving)
     const [user, setUser] = useState(currentuser)
+    const [status, setStatus] = useState();
 
     if (!user) return 'Loading...'
 
@@ -27,10 +27,11 @@ const HostEditProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                alert('Guardado correctamente!')
                 dispatch({ type: 'editprofile', user: data })
+                setStatus('Perfil editado correctamente!')
             })
-            .catch(() => alert('Error guardando...'))
+            .catch(() => console.log('Error guardando...'))
+
 
     }
 
@@ -61,99 +62,100 @@ const HostEditProfile = () => {
             <div className="profile-elements">
                 <label>
                     Coliving:
-                <input className="profile-item" name="name" value={coliving.name || ''} onChange={handleField('name')} />
+                <input className="profile-item" name="name" value={user.name || ''} onChange={handleField('name')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Calle:
-                <input className="profile-item" name="street" value={coliving.street || ''} onChange={handleField('street')} />
+                <input className="profile-item" name="street" value={user.street || ''} onChange={handleField('street')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     C.P:
-                <input className="profile-item" name="zip_code" value={coliving.zip_code || ''} onChange={handleField('zip_code')} />
+                <input className="profile-item" name="zip_code" value={user.zip_code || ''} onChange={handleField('zip_code')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     País:
-                <input className="profile-item" name="country" value={coliving.country || ''} onChange={handleField('country')} />
+                <input className="profile-item" name="country" value={user.country || ''} onChange={handleField('country')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Nº de apartamentos:
-                <input className="profile-item" name="apartments_count" type="number" min="1" max="25" value={coliving.apartments_count || ''} onChange={handleField('apartments_count')} />
+                <input className="profile-item" name="apartments_count" type="number" min="1" max="25" value={user.apartments_count || ''} onChange={handleField('apartments_count')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Nº total de habitaciones:
-                <input className="profile-item" name="rooms_count" type="number" min="5" max="100" value={coliving.rooms_count || ''} onChange={handleField('rooms_count')} />
+                <input className="profile-item" name="rooms_count" type="number" min="5" max="100" value={user.rooms_count || ''} onChange={handleField('rooms_count')} />
                 </label>
             </div>
             <div className="profile-elements radios">
                 <label>
-                    <Radios className="radio-item" name="rooms_type" options={["compartidas", "privadas", "ambas"]} value={coliving.rooms_type || ''}
-                        onChange={handleField('rooms_type')} />
+                    <Radios className="radio-item" name="room_type" options={["compartidas", "privadas", "ambas"]} value={user.room_type || ''}
+                        onChange={handleField('room_type')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Servicios:
-                <input className="profile-item" name="services" value={coliving.services || ''} onChange={handleField('services')} />
+                <input className="profile-item" name="services" value={user.services || ''} onChange={handleField('services')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     €/semana:
-                <input className="profile-item" name="weekly_price" type="number" min="150€" max="800€" value={coliving.weekly_price || ''} onChange={handleField('weekly_price')} />
+                <input className="profile-item" name="weekly_price" type="number" min="150€" max="800€" value={user.weekly_price || ''} onChange={handleField('weekly_price')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     €/mes:
-                <input className="profile-item" type="number" name="monthly_price" min="600€" max="2500€" value={coliving.monthly_price || ''} onChange={handleField('monthly_price')} />
+                <input className="profile-item" type="number" name="monthly_price" min="600€" max="2500€" value={user.monthly_price || ''} onChange={handleField('monthly_price')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Foto:
-                <input className="profile-item" name="poster" type="url" value={coliving.poster || ''} onChange={handleField('poster')} placeholder="url imagen" />
+                <input className="profile-item" name="poster" type="url" value={user.poster || ''} onChange={handleField('poster')} placeholder="url imagen" />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
-                    <textarea className="text-profile-item" name="description" value={coliving.description || ''} onChange={handleField('description')} placeholder="Descripción" cols="35" rows="5" />
+                    <textarea className="text-profile-item" name="description" value={user.description || ''} onChange={handleField('description')} placeholder="Descripción" cols="35" rows="5" />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Web:
-                <input className="profile-item" type="url" name="website" value={coliving.website || ''} onChange={handleField('website')} />
+                <input className="profile-item" type="url" name="website" value={user.website || ''} onChange={handleField('website')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Facebook:
-                <input className="profile-item" type="url" name="facebook" value={coliving.facebook || ''} onChange={handleField('facebook')} />
+                <input className="profile-item" type="url" name="facebook" value={user.facebook || ''} onChange={handleField('facebook')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Instagram:
-                <input className="profile-item" type="url" name="instagram" value={coliving.instagram || ''} onChange={handleField('instagram')} />
+                <input className="profile-item" type="url" name="instagram" value={user.instagram || ''} onChange={handleField('instagram')} />
                 </label>
             </div>
             <div className="profile-elements">
                 <label>
                     Twitter:
-                <input className="profile-item" type="url" name="twitter" value={coliving.twitter || ''} onChange={handleField('twitter')} />
+                <input className="profile-item" type="url" name="twitter" value={user.twitter || ''} onChange={handleField('twitter')} />
                 </label>
             </div>
             <button className="save-profile host">Guardar</button>
+            <p className="okbooked">{status}</p>
         </form>
     )
 }

@@ -27,7 +27,7 @@ const UserEditProfile = () => {
                 alert('Guardado correctamente!')
                 dispatch({ type: 'editprofile', user: data })
             })
-            .catch((e) => console.warn('Error'))
+            .catch((e) => console.log('Error'))
 
     }
 

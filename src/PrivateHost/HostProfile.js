@@ -23,11 +23,11 @@ const HostProfile = () => {
                 <li><span style={listStyle}>Ciudad:</span> {coliving.city}</li>
                 <li><span style={listStyle}>País:</span> {coliving.country}</li>
                 <li><span style={listStyle}>Nº apartamentos:</span> {coliving.apartments_count}</li>
-                <li><span style={listStyle}>Nº total habitaciones:</span> {coliving.room_count}</li>
+                <li><span style={listStyle}>Nº total habitaciones:</span> {coliving.rooms_count}</li>
                 <li><span style={listStyle}>Tipo de habitaciones:</span> {coliving.room_type}</li>
                 <li><span style={listStyle}>Servicios:</span> {coliving.services}</li>
-                <li><span style={listStyle}>Precio/semana:</span> {coliving.weekly_prize}</li>
-                <li><span style={listStyle}>Precio/mes:</span> {coliving.monthly_prize}</li>
+                <li><span style={listStyle}>Precio/semana:</span> {coliving.weekly_price}</li>
+                <li><span style={listStyle}>Precio/mes:</span> {coliving.monthly_price}</li>
                 <li><span style={listStyle}>Sitio web:</span> {coliving.website}</li>
                 <li><span style={listStyle}>Facebook:</span> {coliving.facebook}</li>
                 <li><span style={listStyle}>Instagram:</span> {coliving.instagram}</li>

@@ -35,7 +35,7 @@ const useFormSignup = (callback, validate) => {
       if (ret.ok)
         login(data)
     } catch (err) {
-      console.warn('Error:', err)
+      console.log('Error:', err)
     }
 };
 

@@ -9,6 +9,8 @@ const RatingColiver = () => {
     const [coliverScore, setColiverScore] = useState('coliverScore')
     
     const handleColiverScore = e => setColiverScore(e.target.value)
+    const handleColiver = e => setColiver(e.target.value)
+
 
     const [isError, setError] = useState(false)
    
@@ -40,7 +42,7 @@ const RatingColiver = () => {
             <div className="scorer-elements">
                 <label>
                     Nombre coliver:
-                    <input className="scored-item" name="coliver" required value={coliver} onChange={setColiver} />
+                    <input className="scored-item" name="coliver" required value={coliver} onChange={handleColiver} />
                 </label>
             </div>
             <div className="scorer-elements">
@@ -61,4 +63,5 @@ const RatingColiver = () => {
     )
 }
 
-export default RatingColiver
+export default RatingColiver 
+

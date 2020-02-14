@@ -5,7 +5,7 @@ const useFormHostLogin = (callback, validate) => {
   const dispatch = useDispatch()
   const login = (user) => dispatch({ type: 'login', user })
 
-  const [values, setValues] = useState({ name:"", surname:"", email:"", password:"", colivingName:"", street:"", zipcode:"", city:"", country:"", photo:"", apartments:"", rooms:"", roomType:"", facilities:"", website:"", facebook:"", instagram:"", twitter:"" });
+  const [values, setValues] = useState({ name:"", surname:"", email:"", password:"", colivingName:"", street:"", zipcode:"", city:"", country:"", poster:"", apartments:"", rooms:"", roomType:"", facilities:[], website:"", facebook:"", instagram:"", twitter:"" });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -35,7 +35,7 @@ const useFormHostLogin = (callback, validate) => {
       if (ret.ok)
         login(data)
     } catch (err) {
-      console.warn('Error:', err)
+      console.log('Error:', err)
     }
 };
 
